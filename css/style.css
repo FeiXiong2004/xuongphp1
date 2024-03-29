@@ -1,0 +1,26 @@
+.form-box{
+    width: 500px;
+    height: 450px;
+    border: 1px solid #000;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+.form-add,.form-edit{
+    width: 600px;
+    height: 600px;
+    border: 1px solid #000;
+    margin: auto;
+    padding: 20px;
+}
+.form-add a,.form-edit a{
+    color: #000;
+    text-decoration: none;
+}
+.btn-dark{
+    margin-left:40%;
+
+}
+h1,button{
+    text-align: center;
+}
