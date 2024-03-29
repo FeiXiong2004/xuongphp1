@@ -22,7 +22,9 @@ require "connection.php";
 </style>
 <body>
     <h1>Welcome '<?= $_SESSION['username'];?>' </h1>
-    <h2><?= $_COOKIE['username'] ?? ''?></h2>
+    <h2 style="color:red;text-weight:bold"><?= $_COOKIE['add'] ?? ''?></h2>
+    <h2 style="color:red;text-weight:bold"><?= $_COOKIE['edit'] ?? ''?></h2>
+    <h2 style="color:red;text-weight:bold"><?= $_COOKIE['delete'] ?? ''?></h2>
     <table class="table">
             <thead>
                 <tr>

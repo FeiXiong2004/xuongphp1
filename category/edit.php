@@ -22,6 +22,7 @@ if(isset($_POST['submit'])) {
         $sql = "UPDATE category SET name=? WHERE id=?";
         $stmt = $conn->prepare($sql);
         $stmt->execute([$name, $_GET['id']]);
+        setcookie('edit','Edit confirm',time()+1);
         header('location:index.php?act=category');
         exit();
     }
@@ -55,7 +56,7 @@ if(isset($_POST['submit'])) {
         </div>
         <br>
             <button type="submit" name="submit" class="btn btn-dark ">Submit</button>
-           <button type="submit" name="submit" class="btn btn-success "><a href="index.php?act=category">List</a></button>
+           <button type="submit" name="submit" class="btn btn-success "><a href="index.php?act=category" style="color:black;text-decoration:none">List</a></button>
     </div>
     </form>
 </body>

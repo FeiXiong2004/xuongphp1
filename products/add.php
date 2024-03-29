@@ -35,6 +35,7 @@ if(isset($_POST['submit'])){
         $sql = "INSERT INTO products VALUES(null,'$name',$price, '$image', '$description', $id_category)";
         $stmt = $conn->prepare($sql);
         $stmt -> execute();
+        setcookie('add','Add confirm',time()+1);
         header('location: index.php?act=product');
         return true;
     } 
@@ -52,7 +53,12 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href=".../css/style.css">
 </head>
-
+<style>
+    a{
+        color: black;
+       text-decoration:none;
+    }
+</style>
 <body>
 <form action="" method="POST" enctype="multipart/form-data">
     <div class="form-add">
@@ -83,7 +89,7 @@ if(isset($_POST['submit'])){
         </div>
         <br>
         <button type="submit" name="submit" class="btn btn-dark ">Submit</button>
-        <button type="button" class="btn btn-success "><a href="index.php?act=product">List</a></button>
+        <button type="button" class="btn btn-success "><a href="index.php?act=product" >List</a></button>
     </div>
     </form>
 </body>

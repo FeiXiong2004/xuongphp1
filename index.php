@@ -31,6 +31,9 @@ if(isset($_GET['act'])){
         case 'delete_product':
             require 'products/delete.php';
             break;
+        case 'logout':
+            require 'logout.php';
+            break;
         default:
          require 'header.php';
          break;

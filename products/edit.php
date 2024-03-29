@@ -39,6 +39,7 @@ $product = $stmt->fetch(PDO::FETCH_ASSOC);
     $sql = "UPDATE products SET name=?, price=?, image=?, description=?, id_category=? WHERE id=?";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$name, $price, $image, $description, $id_category, $_GET['id']]);
+    setcookie('edit','Edit confirm',time()+1);
     header('location:index.php?act=product');
     }
     
@@ -56,7 +57,10 @@ $product = $stmt->fetch(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href=".../css/style.css">
 </head>
 <style>
-
+    a{
+        color: black;
+       text-decoration:none;
+    }
 </style>
 <body>
 <form action="" method="POST" enctype="multipart/form-data">
@@ -93,7 +97,7 @@ $product = $stmt->fetch(PDO::FETCH_ASSOC);
         <br>
        
             <button type="submit" name="submit" class="btn btn-dark ">Submit</button>
-           <button type="submit" name="submit" class="btn btn-success "><a href="index.php?act=product">List</a></button>
+           <button type="submit" name="submit" class="btn btn-success " ><a href="index.php?act=product" style="color:black,text-decoration:none">List</a></button>
     </div>
     </form>
 </body>

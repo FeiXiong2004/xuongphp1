@@ -16,5 +16,7 @@
                 <li><a href="index.php">Trang chủ</a></li>
                 <li><a href="index.php?act=category">Category</a></li>
                 <li><a href="index.php?act=product">Product</a></li>
+                <li><a href="index.php?act=logout">Log out</a></li>
             </ul>
         </div>
+        

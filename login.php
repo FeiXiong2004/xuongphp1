@@ -39,6 +39,7 @@ session_start();
     
 </style>
 <body>
+    <h1><?= $_COOKIE['logout'] ?? ''?></h1>
     <div class="form-box">
         <form action="" method="POST">
             <h1>Login</h1>
@@ -54,5 +55,6 @@ session_start();
                 <button type="submit" name="submit" class="btn btn-dark ">Submit</button>
         </form>
     </div>
+    
 </body>
 </html>
